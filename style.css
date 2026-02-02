@@ -7,40 +7,124 @@
 
 body {
     background: #f4f4f4;
+}
+
+/* Navbar */
+.navbar {
+    background: #333;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.navbar .logo {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.navbar .nav-links li {
+    margin-left: 20px;
+}
+
+.navbar .nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.navbar .nav-links a:hover {
+    color: #4facfe;
+}
+
+/* Hero Section (Home Page) */
+.hero {
     text-align: center;
+    padding: 50px 20px;
 }
 
-header {
-    background: #222;
-    color: #fff;
-    padding: 30px 10px;
+.hero h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
 }
 
-header h1 {
-    font-size: 32px;
-    margin-bottom: 10px;
+.hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
 }
 
-.video-section {
-    padding: 40px 10px;
-}
-
-video {
-    width: 80%;
-    max-width: 700px;
+/* Forms (Login / Signup / Order) */
+.form-box {
+    background: white;
+    padding: 30px;
+    width: 350px;
     border-radius: 10px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    text-align: center;
+    margin: 50px auto;
 }
 
-footer {
-    background: #222;
-    color: #fff;
-    padding: 15px;
-    margin-top: 40px;
+.form-box h2 {
+    margin-bottom: 20px;
+    color: #333;
 }
 
-@media (max-width: 600px) {
-    video {
-        width: 95%;
+.form-box input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-box button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background: #4facfe;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.form-box button:hover {
+    background: #00c6ff;
+}
+
+/* Video */
+video {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .navbar .nav-links {
+        flex-direction: column;
+        background: #444;
+        width: 100%;
+        display: none;
+    }
+
+    .navbar .nav-links li {
+        margin: 10px 0;
+    }
+
+    .form-box {
+        width: 90%;
+    }
+
+    .hero {
+        padding: 20px;
     }
 }
